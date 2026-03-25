@@ -8,218 +8,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        
-        :root {
-            --ai-pink: #ff4081;
-            --ai-purple: #9c27b0;
-            --dark-bg: #0d0d12;
-            --glass: rgba(255, 255, 255, 0.05);
-        }
-
-        body {
-            background-color: var(--dark-bg);
-            color: #ffffff;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-image: radial-gradient(circle at top right, rgba(255, 64, 129, 0.1), transparent),
-                              radial-gradient(circle at bottom left, rgba(156, 39, 176, 0.1), transparent);
-        }
-
-        .navbar {
-            background: rgba(13, 13, 18, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 64, 129, 0.3);
-        }
-
-        .hero-section {
-            padding: 80px 20px 40px;
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid var(--ai-pink);
-            box-shadow: 0 0 25px var(--ai-pink);
-            object-fit: cover;
-            transition: 0.5s;
-        }
-
-        .profile-img:hover {
-            transform: rotate(360deg) scale(1.1);
-        }
-
-        .category-card {
-            background: var(--glass);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 20px;
-            margin-bottom: 25px;
-            backdrop-filter: blur(5px);
-        }
-
-        .item-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 15px;
-            padding: 15px;
-            transition: 0.3s;
-            height: 100%;
-        }
-
-        .item-card:hover {
-            border-color: var(--ai-pink);
-            background: rgba(255, 64, 129, 0.05);
-            transform: translateY(-5px);
-        }
-
-        .price-tag {
-            color: #00ff88;
-            font-weight: 800;
-            font-size: 1.2rem;
-        }
-
-        .btn-order {
-            background: linear-gradient(45deg, var(--ai-pink), var(--ai-purple));
-            border: none;
-            color: white;
-            font-weight: bold;
-            border-radius: 10px;
-            padding: 10px;
-            width: 100%;
-            transition: 0.3s;
-        }
-
-        .btn-order:hover {
-            box-shadow: 0 0 15px var(--ai-pink);
-            color: white;
-        }
-
-        .warning-text {
-            color: #ff4444;
-            font-size: 0.85rem;
-            background: rgba(255, 68, 68, 0.1);
-            padding: 10px;
-            border-radius: 10px;
-            border-left: 4px solid #ff4444;
-        }
-
-        .payment-icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            background: linear-gradient(to bottom, #fff, #888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .cs-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 50px;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            z-index: 1000;
-        }
+        :root { --ai-pink: #ff4081; --dark-bg: #0d0d12; }
+        body { background-color: var(--dark-bg); color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .navbar { background: rgba(13, 13, 18, 0.9); border-bottom: 1px solid var(--ai-pink); backdrop-filter: blur(10px); }
+        .hero-section { padding: 100px 20px 40px; text-align: center; }
+        .profile-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--ai-pink); box-shadow: 0 0 20px var(--ai-pink); object-fit: cover; }
+        .category-title { border-left: 4px solid var(--ai-pink); padding-left: 15px; margin: 30px 0 20px; font-weight: bold; color: var(--ai-pink); }
+        .item-card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 20px; transition: 0.3s; height: 100%; }
+        .item-card:hover { border-color: var(--ai-pink); transform: translateY(-5px); }
+        .price-tag { color: #00ff88; font-weight: 800; font-size: 1.2rem; margin-bottom: 15px; }
+        .btn-order { background: linear-gradient(45deg, #ff4081, #9c27b0); border: none; color: white; font-weight: bold; width: 100%; border-radius: 10px; padding: 10px; }
+        .cs-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 1000; }
+        .warning-box { background: rgba(255, 0, 0, 0.1); border: 1px solid #ff4444; border-radius: 10px; padding: 15px; margin-bottom: 25px; font-size: 0.85rem; }
     </style>
 </head>
 <body>
 
 <nav class="navbar navbar-dark fixed-top">
     <div class="container">
-        <span class="navbar-brand fw-extrabold"><i class="fas fa-star text-pink"></i> AI HOSHINO STORE</span>
+        <span class="navbar-brand fw-bold">NARA x HIRO ULTRA</span>
     </div>
 </nav>
 
 <div class="hero-section">
-    <img src="https://i.ibb.co/hR0W3V5/Ai-Hoshino.jpg" alt="Ai Hoshino" class="profile-img mb-3">
-    <h2 class="fw-bold">Nara x Hiro Ultra</h2>
+    <img src="https://i.pinimg.com/736x/01/9b/6e/019b6e229712a20b005e8369324a3504.jpg" alt="Ai Hoshino" class="profile-img">
+    <h2 class="mt-3 fw-bold">Ai Hoshino x Nara Store</h2>
     <p class="text-secondary">Premium App & Game Top Up Center</p>
 </div>
 
 <div class="container mb-5">
-    <div class="warning-text mb-4">
-        <strong><i class="fas fa-shield-alt"></i> STOP PAKAI MOD:</strong> Akun Google rawan banned, HP rawan virus/spyware, dan sering error pas ekspor!
+    <div class="warning-box text-center">
+        <i class="fas fa-exclamation-triangle"></i> <strong>HATI-HATI MOD!</strong> Pakai Premium agar data aman & bebas lag pas ekspor.
     </div>
 
-    <h4 class="mb-3"><i class="fas fa-gamepad text-info"></i> Game Top Up</h4>
+    <h4 class="category-title">🎮 TOP UP GAME</h4>
     <div class="row mb-4">
-        <div class="col-6 col-md-3 mb-3">
+        <div class="col-md-6 mb-3">
             <div class="item-card text-center">
-                <h6>Mobile Legends</h6>
-                <p class="small text-muted">Mulai 86💎</p>
-                <a href="https://wa.me/6288983338513?text=Order+ML" class="btn btn-order btn-sm">Order</a>
+                <h5>Mobile Legends</h5>
+                <select class="form-select bg-dark text-white border-secondary mb-3">
+                    <option>86💎 - Rp 20.000</option>
+                    <option>172💎 - Rp 40.000</option>
+                    <option>257💎 - Rp 60.000</option>
+                </select>
+                <a href="https://wa.me/6288983338513?text=Order+ML" class="btn btn-order">Order Sekarang</a>
             </div>
         </div>
-        <div class="col-6 col-md-3 mb-3">
+        <div class="col-md-6 mb-3">
             <div class="item-card text-center">
-                <h6>Free Fire</h6>
-                <p class="small text-muted">Mulai 70💎</p>
-                <a href="https://wa.me/6288983338513?text=Order+FF" class="btn btn-order btn-sm">Order</a>
-            </div>
-        </div>
-    </div>
-
-    <h4 class="mb-3"><i class="fas fa-gem text-warning"></i> Apps Premium</h4>
-    <div class="row">
-        <div class="col-md-4 mb-3">
-            <div class="item-card">
-                <span class="badge bg-danger mb-2">Best Seller</span>
-                <h5>Alight Motion Pro</h5>
-                <p class="small text-secondary">Support XML & No Watermark</p>
-                <div class="price-tag mb-3">Rp 15.000 / Thn</div>
-                <a href="https://wa.me/6288983338513?text=Order+AM+Pro" class="btn btn-order">Beli Sekarang</a>
-            </div>
-        </div>
-        <div class="col-md-4 mb-3">
-            <div class="item-card">
-                <h5>CapCut / Wink Pro</h5>
-                <p class="small text-secondary">Semua Fitur Pro Terbuka</p>
-                <div class="price-tag mb-3">Rp 15.000 / Thn</div>
-                <a href="https://wa.me/6288983338513?text=Order+CapCut+Pro" class="btn btn-order">Beli Sekarang</a>
-            </div>
-        </div>
-        <div class="col-md-4 mb-3">
-            <div class="item-card">
-                <h5>YouTube VIP</h5>
-                <p class="small text-secondary">Bebas Iklan & Play Background</p>
-                <div class="price-tag mb-3">Rp 15.000 / Bln</div>
-                <a href="https://wa.me/6288983338513?text=Order+YouTube+VIP" class="btn btn-order">Beli Sekarang</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="category-card mt-5 text-center">
-        <h5 class="mb-4">METODE PEMBAYARAN</h5>
-        <div class="row">
-            <div class="col-4">
-                <i class="fas fa-wallet payment-icon"></i>
-                <p class="small">DANA</p>
-            </div>
-            <div class="col-4">
-                <i class="fas fa-university payment-icon"></i>
-                <p class="small">BANK</p>
-            </div>
-            <div class="col-4">
-                <i class="fas fa-qrcode payment-icon"></i>
-                <p class="small">QRIS</p>
-            </div>
-        </div>
-        <p class="mt-3 fw-bold text-info">Admin: 088983338513</p>
-    </div>
-</div>
-
-<footer class="text-center text-muted pb-5">
-    <p class="small">&copy; 2026 AI HOSHINO x NARA STORE. Created with 💖</p>
-</footer>
-
-<a href="https://wa.me/6288983338513" class="cs-float">
-    <i class="fab fa-whatsapp"></i> Chat Admin
-</a>
-
-</body>
-</html>
+                <h5>Free Fire</h5>
+                <select class="form-select bg-dark text-white border-secondary mb-3">
+                    <option>70💎 - Rp 10.000</option>
+                    <option>140💎 - Rp 20.000</option>
+                    <option>355💎 - Rp 50.000</option>
+                </select>
+                <a href="
