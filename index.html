@@ -13,11 +13,12 @@
         .hero { padding: 60px 20px; text-align: center; background: linear-gradient(to bottom, #1a1a1a, var(--dark-bg)); }
         .ai-logo { width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--primary-color); box-shadow: 0 0 20px var(--primary-color); }
         .category-title { border-left: 5px solid var(--primary-color); padding-left: 15px; margin: 40px 0 20px; font-weight: bold; }
-        .card { background: var(--card-bg); border: 1px solid #222; border-radius: 15px; transition: 0.3s; overflow: hidden; }
+        .card { background: var(--card-bg); border: 1px solid #222; border-radius: 15px; transition: 0.3s; overflow: hidden; height: 100%; }
         .card:hover { border-color: var(--primary-color); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(255, 64, 129, 0.2); }
-        .price { color: #00ff88; font-weight: bold; }
-        .btn-buy { background: var(--primary-color); border: none; color: white; font-weight: 600; width: 100%; border-radius: 8px; }
+        .price { color: #00ff88; font-weight: bold; font-size: 1.2rem; }
+        .btn-buy { background: var(--primary-color); border: none; color: white; font-weight: 600; width: 100%; border-radius: 8px; margin-top: auto; }
         .btn-buy:hover { background: #e91e63; color: white; }
+        .warning-box { background: rgba(255, 0, 0, 0.1); border: 1px solid #ff4444; border-radius: 10px; padding: 15px; margin-bottom: 30px; }
         .pay-section { background: #161616; border-radius: 20px; padding: 30px; margin-top: 50px; border: 1px solid #333; }
         .method-item { background: #222; padding: 15px; border-radius: 10px; margin-bottom: 10px; }
         .cs-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; font-weight: bold; text-decoration: none; z-index: 999; box-shadow: 0 5px 15px rgba(0,0,0,0.4); }
@@ -38,14 +39,57 @@
 </div>
 
 <div class="container">
+    <div class="warning-box">
+        <h5 class="text-danger fw-bold"><i class="fas fa-exclamation-triangle"></i> Bahaya AM Mod (Gratisan)</h5>
+        <ul class="small mb-0">
+            <li>Pencurian Data: File Mod sering disisipi malware.</li>
+            <li>Rawan Lag/Crash: Tidak stabil untuk HP spek tertentu.</li>
+            <li>Banned Account: Akun Google kamu berisiko di-suspend.</li>
+        </ul>
+    </div>
+
     <h3 class="category-title">🎮 TOP UP GAME</h3>
     <div class="row">
-        <div class="col-md-4 mb-3">
+        <div class="col-md-6 mb-3">
             <div class="card p-3 text-center">
                 <h5>Mobile Legends</h5>
                 <p class="small text-secondary">Diamonds Cepat & Aman</p>
-                <select class="form-select form-select-sm mb-2 bg-dark text-white border-secondary">
+                <select class="form-select form-select-sm mb-3 bg-dark text-white border-secondary">
                     <option>86 Diamonds - Rp 20.000</option>
                     <option>172 Diamonds - Rp 40.000</option>
                     <option>257 Diamonds - Rp 60.000</option>
-                    <option>7
+                    <option>706 Diamonds - Rp 155.000</option>
+                </select>
+                <a href="https://wa.me/6288983338513?text=Halo+Nara+Store,+mau+Top+Up+MLBB" class="btn btn-buy">Order Top Up</a>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="card p-3 text-center">
+                <h5>Free Fire</h5>
+                <p class="small text-secondary">Top Up DM FF Murah</p>
+                <select class="form-select form-select-sm mb-3 bg-dark text-white border-secondary">
+                    <option>70 DM - Rp 10.000</option>
+                    <option>140 DM - Rp 20.000</option>
+                    <option>355 DM - Rp 50.000</option>
+                </select>
+                <a href="https://wa.me/6288983338513?text=Halo+Nara+Store,+mau+Top+Up+FF" class="btn btn-buy">Order Top Up</a>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="category-title">✨ APLIKASI PREMIUM (BEST SELLER)</h3>
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card p-3 d-flex flex-column">
+                <span class="badge bg-danger mb-2" style="width: fit-content;">Hot Item</span>
+                <h5>Alight Motion Pro</h5>
+                <p class="small text-secondary">Full Preset, No Watermark, Aman 100%</p>
+                <p class="price mb-3">Rp 15.000 / Tahun</p>
+                <a href="https://wa.me/6288983338513?text=Halo+Admin+Hiro,+saya+mau+order+AM+Premium" class="btn btn-buy">Beli Sekarang</a>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card p-3 d-flex flex-column">
+                <h5>YouTube VIP Premium</h5>
+                <p class="small text-secondary">No Ads, Background Play, YT Music</p>
+                <p class="price mb-3">Rp
